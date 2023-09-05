@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mas historia</title>
+    <link rel="shortcut icon" href="./images/icono-epn.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <meta name="theme-color" content="#2091F9">
+    <meta name="title" content="Aprende acerca de compiladores y cómo funcionan desde cero">
+</head>
+
+<body>
+
+<header class="hero2">
+    <nav class="nav container">
+        <div class="nav__logo">
+            <h2 class="nav__title"> Pixel Compilers </h2>
+        </div>
+
+        <ul class="nav__link nav__link--menu">
+            <li class="nav__items">
+                <a href="./index.html" class="nav__links">Inicio</a>
+            </li>
+            <li class="nav__items">
+                <a href="#" class="nav__links">Acerca de</a>
+            </li>
+            <li class="nav__items">
+                <a href="#" class="nav__links">Contacto</a>
+            </li>
+            <li class="nav__items">
+                <a href="#" class="nav__links">Blog</a>
+            </li>
+
+            <img src="./images/menu.svg" class="nav__close">
+        </ul>
+
+        <div class="nav__menu">
+            <img src="./images/menu.svg" class="nav__img">
+        </div>
+    </nav>
+
+
+
+
+
+</header>
+<div class="container">
+<section id="AnalisisL" >
+
+    <h2>Análisis Lexico</h2><br>
+    <p class="about__paragraph">El análisis léxico, como primer paso en el proceso de interpretación,
+        implica el reconocimiento de palabras como la unidad más pequeña por encima de las letras.
+        Este proceso no es trivial, como se puede observar en ejemplos donde palabras se
+        fragmentan de manera confusa, como en "ist his ase nte nce" en lugar de "is this a sentence".
+        El analizador léxico divide el texto del programa en "palabras" o "tokens",
+        tal como en el siguiente ejemplo: "si x == y entonces z = 1 sino z = 2".
+        Estas unidades, representadas por los tokens, forman la base para la comprensión
+        posterior del programa y su procesamiento.</p> <br>
+    <div>
+        <h3>Calculadora</h3> 
+    
+        <img src="./images/calcy.svg" alt="Imagen Descriptiva">
+        <img src="./images/calcl.svg" alt="Imagen Descriptiva">
+    </div>
+
+</section>
+
+
+<section id="Parser" class="centrado">
+
+        <h2>Parser</h2><br>
+        <p class="about__paragraph">El proceso de análisis sintáctico, también conocido como "parsing" en inglés,
+            es esencial para comprender la estructura de las oraciones una vez que se han entendido las palabras
+            individuales. Esto se asemeja al diagramado de oraciones, donde se utiliza un enfoque de árbol
+            para representar gráficamente la estructura. En el análisis sintáctico de programas,
+            como en el ejemplo proporcionado ("if x == y then z = 1 else z = 2"), se aplica un enfoque similar.
+            Se descompone la expresión en componentes más pequeños y se organiza de manera jerárquica,
+            permitiendo una comprensión más profunda de cómo se relacionan y funcionan los elementos en el
+            contexto del lenguaje de programación.</p> <br>
+</section>
+
+
+<section id="Semantica" class="centrado">
+
+        <h2>Análisis Semántico</h2> <br>
+        <p class="about__paragraph">Una vez que se comprende la estructura de una oración, el siguiente paso es intentar
+            comprender el "significado", pero este proceso resulta ser demasiado complejo para los compiladores.
+            Estos realizan un análisis semántico limitado para detectar inconsistencias. En el análisis semántico
+            del lenguaje natural, como en el ejemplo proporcionado ("Jack dijo que Jerry dejó su tarea en casa"),
+            surgen preguntas sobre a quién se refiere el pronombre "su": ¿a Jack o a Jerry? La ambigüedad es aún
+            mayor en casos como "Jack dijo que Jack dejó su tarea en casa": ¿cuántos Jack hay?
+            ¿Cuál de ellos dejó la tarea?
+            <br>
+            En la programación, los lenguajes definen reglas estrictas para evitar este tipo de ambigüedades.
+            En el código en C++ proporcionado, por ejemplo, se imprime "4", ya que se utiliza la definición interna
+            de Jack. Los compiladores realizan numerosas comprobaciones semánticas además de las vinculaciones de
+            variables. Por ejemplo, en la oración "Jack dejó su tarea en casa", podría haber un desajuste de tipos
+            entre "su" y "Jack" si se asume que Jack es un nombre masculino. Estas comprobaciones ayudan a
+            garantizar que el código tenga sentido y sea coherente</p> <br>
+
+</section>
+
+<section id="Optimizacion" class="centrado">
+
+        <h2>Optimización</h2> <br>
+
+        <p class="about__paragraph" style="text-align: left;">La optimización en programación es similar a la
+            edición en el sentido de que busca minimizar el tiempo de lectura y la cantidad de elementos
+            que el lector debe retener en la memoria a corto plazo. Su objetivo es modificar automáticamente
+            los programas de manera que funcionen de manera más rápida y eficiente, utilizando menos memoria
+            u otros recursos. En este contexto, la optimización se asemeja a la práctica de conservar algún
+            recurso. Sin embargo, es importante destacar que no todos los métodos de optimización son siempre
+            válidos. Un ejemplo de optimización es la transformación de "x = y * 0" a "x = 0", ya que el
+            operador "*" se anula con el valor cero. Aunque esto puede ser válido en algunos casos,
+            no siempre es una optimización legal.<br>
+
+            Cabe mencionar que el proceso de optimización busca equilibrar el rendimiento y la eficiencia
+            de un programa, teniendo en cuenta las reglas y restricciones del lenguaje de programación
+            utilizado.</p> <br>
+
+</section>
+
+<section id="GeneracionCode">
+
+        <h2>Generación de código</h2> <br>
+
+        <p class="about__paragraph" style="text-align: left;">
+            La generación de código en programación implica, en su mayoría, la producción de código de
+            ensamblaje. En general, se trata de una traducción a otro lenguaje, de manera análoga a la
+            traducción entre idiomas humanos. Este proceso implica convertir el código fuente escrito
+            por los programadores en un lenguaje de programación de alto nivel en instrucciones de bajo
+            nivel comprensibles por la máquina. La generación de código es una etapa crucial en el proceso
+            de compilación, ya que transforma la lógica abstracta del programa en una serie de instrucciones
+            concretas que la computadora puede ejecutar de manera efectiva.   </p>
+
+</section>
+</div>
+</body>
+</html>
+
